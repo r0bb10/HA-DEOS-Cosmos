@@ -1,0 +1,47 @@
+{
+  "title": "DEOS COSMOS",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connetti COSMOS",
+        "description": "Inserisci i dettagli di connessione del controllore DEOS COSMOS.",
+        "data": {
+          "host": "Nome host o indirizzo IP del controllore",
+          "port": "Porta HTTP del controllore",
+          "info_port": "Porta HTTP delle informazioni di sistema",
+          "scan_interval": "Intervallo di interrogazione (secondi)"
+        }
+      },
+      "reconfigure": {
+        "title": "Riconfigura COSMOS",
+        "description": "Aggiorna i dettagli di connessione del controllore.",
+        "data": {
+          "host": "Nome host o indirizzo IP del controllore",
+          "port": "Porta HTTP del controllore",
+          "info_port": "Porta HTTP delle informazioni di sistema",
+          "scan_interval": "Intervallo di interrogazione (secondi)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Impossibile leggere i dati del controllore. Controlla indirizzo e porte.",
+      "invalid_host": "Inserisci un nome host o un indirizzo IP senza schema URL, porta o percorso.",
+      "invalid_port": "Inserisci un numero intero di porta compreso tra 1 e 65535.",
+      "invalid_interval": "Inserisci un numero intero di secondi compreso tra 1 e 300.",
+      "cannot_identify": "Impossibile leggere il numero di serie del controllore. Controlla la porta delle informazioni di sistema."
+    },
+    "abort": {
+      "already_configured": "Questo controllore è già configurato.",
+      "wrong_device": "Il numero di serie non corrisponde al controllore configurato.",
+      "reconfigure_successful": "Configurazione del controllore aggiornata correttamente."
+    }
+  },
+  "exceptions": {
+    "reconfigure_required": {
+      "message": "Indirizzo del controllore mancante. Seleziona Riconfigura per impostarlo."
+    },
+    "controller_serial_changed": {
+      "message": "Il numero di serie del controllore è cambiato. Controlla l'indirizzo."
+    }
+  }
+}

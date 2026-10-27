@@ -1,0 +1,47 @@
+{
+  "title": "DEOS COSMOS",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to COSMOS",
+        "description": "Enter your DEOS COSMOS controller's connection details.",
+        "data": {
+          "host": "Controller hostname or IP address",
+          "port": "Controller HTTP port",
+          "info_port": "System information HTTP port",
+          "scan_interval": "Polling interval (seconds)"
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigure COSMOS",
+        "description": "Update your controller's connection details.",
+        "data": {
+          "host": "Controller hostname or IP address",
+          "port": "Controller HTTP port",
+          "info_port": "System information HTTP port",
+          "scan_interval": "Polling interval (seconds)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to read controller data. Check the address and ports.",
+      "invalid_host": "Enter a hostname or IP address without a URL scheme, port, or path.",
+      "invalid_port": "Use a whole-number port between 1 and 65535.",
+      "invalid_interval": "Use a whole number of seconds between 1 and 300.",
+      "cannot_identify": "Unable to read the controller's serial number. Check the system information port."
+    },
+    "abort": {
+      "already_configured": "This controller is already configured.",
+      "wrong_device": "The serial number does not match the configured controller.",
+      "reconfigure_successful": "Controller configuration updated successfully."
+    }
+  },
+  "exceptions": {
+    "reconfigure_required": {
+      "message": "Controller address is missing. Select Reconfigure to set it."
+    },
+    "controller_serial_changed": {
+      "message": "The controller's serial number has changed. Check the address."
+    }
+  }
+}
